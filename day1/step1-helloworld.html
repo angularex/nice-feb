@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /*   
+       */      
+        function init(){
+          document.getElementsByTagName("h1")[0].textContent = "Hello World !!!!";
+        };
+        document.addEventListener("DOMContentLoaded", init);
+        // window.onload = init; 
+        // window.addEventListener("load", init);
+        
+    /*    
+        window.onload = function(){
+            document.getElementsByTagName("h1")[0].textContent = "Hello World !!!!";
+        };
+    */
+    </script>
+</head>
+<body>
+<!-- <body onload="init()"> -->
+    <h1></h1>
+   <!--  <script>
+        init();
+    </script> -->
+</body>
+</html>
+
+<!--
+    create 3 functions call them fun1 fun2 and fun3
+    call the fun1 on body onload
+    call the fun2 on window.addEventListener on load
+    call the fun3 on document.addEventListener on DOMContentLoaded
+    -------------------------
+    findout out the sequence of execution of these functions
+-->

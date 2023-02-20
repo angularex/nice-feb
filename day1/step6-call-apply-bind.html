@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ironman = {
+            title : "Ironman",
+            firstname : "Tony",
+            lastname : "Stark",
+            fullname : function(message){
+                return this.firstname+" "+this.lastname+" says "+ message;
+            }
+        };
+        var spiderman = {
+            title : "Spiderman",
+            firstname : "Peter",
+            lastname : "Parker"
+        };
+        var hulk = {
+            title : "Hulk",
+            firstname : "Bruce",
+            lastname : "Benner"
+        };
+        /*         
+        console.log(ironman.fullname.call(spiderman));
+        console.log(ironman.fullname.call(hulk)); ,"Hello"
+        console.log(ironman.fullname.call(spiderman, "Hello"));
+        console.log(ironman.fullname.call(hulk, "Hi")); 
+        */
+       /*        
+       console.log(ironman.fullname.apply(spiderman));
+       console.log(ironman.fullname.apply(hulk));  
+       console.log(ironman.fullname.apply(spiderman,["Hello"]));
+       console.log(ironman.fullname.apply(hulk,["Hi"]));  
+        */
+       var spidermessage = ironman.fullname.bind(spiderman);
+       console.log("waiting for the spiderman to send the message");
+       console.log("waiting for the spiderman to send the message");
+       console.log("waiting for the spiderman to send the message");
+       console.log(spidermessage("Hi"));
+       console.log(ironman.fullname.bind(hulk)("Hello"));   
+        /*        
+        console.log(ironman.fullname.bind(spiderman)());
+        console.log(ironman.fullname.bind(hulk)());   
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

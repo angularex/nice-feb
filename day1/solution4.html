@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var cart = {
+            name : 'Cart',
+            getCostPrice : function(){
+                return 100
+            },
+            getSellingPrice : function(){
+                var calculateProfit = function(reference){
+                    return reference.getCostPrice() * 0.2;
+                }
+                return this.getCostPrice() + calculateProfit(this);
+            }
+        };
+ 
+        console.log(cart.getSellingPrice());/// 120
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

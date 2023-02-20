@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <script>
+        let hero = {
+            title : "Ironman",
+            power : 7,
+            city : "New York",
+            firstname : "Tony",
+            lastname : "Stark"
+        };
+      /*   
+      // console.log(hero.power);
+        let temphero = hero;
+        temphero.power+=100;
+        console.log(temphero.power);
+        console.log(hero.power);// ???  
+        */
+
+        /* 
+        let herotitle = hero.title;
+        let heropower = hero.power;
+        let herocity = hero.city;
+        let herofirstname = hero.firstname;
+        let herolastname = hero.lastname;
+
+        console.log(hero.power);
+        console.log(heropower);
+        heropower+=100;
+        console.log(heropower);
+        console.log(hero.power);// ???  
+        */
+
+       /*  let {   title : herotitle, 
+                power : heropower, 
+                city : herocity, 
+                firstname : herofirstname, 
+                lastname : herolastname } = hero;
+
+        console.log(hero.power);
+        console.log(heropower);
+        heropower+=100;
+        console.log(heropower);
+        console.log(hero.power);// ???   */
+
+       /*  
+        let heroes = ["Ironman", "Hulk", "Antman"];
+        let [firsthero, secondhero, thirdhero ] = heroes;
+        console.log(firsthero, thirdhero, secondhero); 
+        */
+
+        /*         
+            let {   title : title, 
+                power : power, 
+                city : city, 
+                firstname : firstname, 
+                lastname : lastname } = hero; 
+        */
+
+        // let { title,  power,  city,  firstname, lastname } = hero;
+        
+        // let temphero =  {...hero};
+        let temphero =  JSON.parse(JSON.stringify(hero));
+        console.log(hero.power);
+        console.log(temphero.power);
+        temphero.power+=100;
+        console.log(temphero.power);
+        console.log(hero.power);// ???  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
