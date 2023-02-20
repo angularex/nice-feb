@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let favNums = [77,13,68,100,87,53,15,85,7,18,57,33,45,47,96,7,79];
+        /*  
+        let doubleFavNums = [];
+        for(let i = 0; i < favNums.length; i++){
+            doubleFavNums.push(favNums[i] * 2);
+        };
+        console.log(favNums);
+        console.log(doubleFavNums); 
+        */
+       /*  
+       favNums.forEach(function(val,idx,arr){
+            doubleFavNums.push(val*2);
+        }); 
+        */
+       // forEach
+       /* 
+       favNums.forEach( val => doubleFavNums.push(val*2) );
+       console.log(favNums);
+       console.log(doubleFavNums);  
+       */
+      
+       // map
+       /* 
+       let doubleFavNums = favNums.map( val => val*2 ); 
+       console.log(favNums);
+       console.log(doubleFavNums); 
+       */
+
+       /*  
+       let nums = [1,2,3,4,5];
+       let anothernums = nums.map(function(val){
+               return val
+       });
+       console.log(anothernums);
+       */
+      /*
+      let lessThan50 = favNums.filter(function(val,idx,arr){
+          return val < 50;
+        });
+        console.log(lessThan50);
+      */
+       /*  
+       console.log(favNums.every((val, idx) => {
+            console.log(val ," every was called ",idx+1," times")
+            return val > 10;
+        })); 
+       */
+       /*  
+       console.log(favNums.some((val, idx) => {
+            console.log(val ," some was called ",idx+1," times")
+            return val > 10;
+        })); 
+        */
+       /* var total = favNums.reduce(function(initVal, val, idx, arr){
+            console.log(val)
+            return initVal + val;
+       },0);
+
+       console.log(total); 
+       */
+       console.log(favNums.indexOf(7));
+       console.log(favNums.lastIndexOf(7));
+      </script>
+</head>
+<body>
+    
+</body>
+</html>
