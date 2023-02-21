@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        class can have properties
+            public, private, static
+        class can have a constructor
+        class can have methods
+            public, private, static
+        class can have getters and setters
+        classes can be inherited, extended
+        */
+        
+        class Hero{
+            title ;
+            power ;
+            firstname ;
+            lastname ;
+            #mission = "my secret mission";
+            constructor(htitle, hfname, hlname, hpower = 0){
+               this.title = htitle;
+               this.power = hpower;
+               this.firstname = hfname;
+               this.lastname = hlname;
+            };
+            fullname(){
+                return this.firstname+" "+this.lastname;
+            }
+            get mission(){
+                return this.#mission;
+            }
+            set mission(nmission){
+                this.#mission = nmission;
+            }
+        };
+        let hero1 = new Hero("Batman","Bruce","Wayne",6);
+        let hero2 = new Hero("Superman","Clark","Kent",10);
+        console.log( hero1.fullname() );
+        console.log( hero1.mission );
+        hero1.mission = "Save the world";
+        console.log( hero2.fullname() );
+        console.log( hero1.mission );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

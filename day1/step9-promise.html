@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <script>
+        // higher order function
+
+        let promise = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                if(true){
+                    resolve("Promise was Resolved");
+                }else{
+                    reject("Promise was Rejected");
+                }
+            },2000);
+        });
+      //----------------------------------------------------
+    /* 
+      promise.then( function(res){
+            console.log(res);
+        }, function(err){
+            console.log(err);
+      }); */
+      /* 
+      promise
+      .then(function(res){
+        console.log(res)
+      })
+      .catch(function(err){
+        console.log(err)
+      })
+      .finally(function(){
+        console.log("promise has completed its job")
+      }) 
+      */
+
+      promise
+      .then(res => {console.log(res) ; return res.toUpperCase()} )
+      .then(res => {console.log(res) ; return res.toLowerCase()} )
+      .then(res => {console.log(res) } )
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Promises</title>
+    <script>
+       let firstpromise = function(){
+            let promise = new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("first promise was resolved");
+                    }else{
+                        reject("first promise was rejected");
+                    }
+                },1000);
+            });
+            return promise;
+       }
+       let secondpromise = function(){
+            let promise = new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("second promise was resolved");
+                    }else{
+                        reject("second promise was rejected");
+                    }
+                },200);
+            });
+            return promise;
+       }
+       let thirdpromise = function(){
+            let promise = new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    if(false){
+                        resolve("third promise was resolved");
+                    }else{
+                        reject("third promise was rejected");
+                    }
+                },500);
+            });
+            return promise;
+       };
+
+      /*  
+       Promise
+       .all([thirdpromise(), firstpromise(), secondpromise()])
+       .then(res => console.log(res))
+       .catch(err => console.log(err)); 
+       */
+
+      /*  
+       Promise
+       .any([thirdpromise(), firstpromise(), secondpromise()])
+       .then(res => console.log(res))
+       .catch(err => console.log(err));  
+       */
+
+       Promise
+       .race([ firstpromise(), secondpromise(), thirdpromise()])
+       .then(res => console.log(res))
+       .catch(err => console.log(err)); 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
