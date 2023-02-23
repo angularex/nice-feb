@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes More</title>
+    <script>
+        class Person{
+            power = 0;
+            constructor(hpow){
+                this.power = hpow;
+            }
+        }
+        class Hero extends Person{
+            static version = 101;
+            title = "default";
+            firstname = "default";
+            lastname = "default";
+            #mission = "my secret mission";
+            constructor(htitle, hfname, hlname,hpower=0){
+               super(hpower);
+               this.title = htitle;
+               this.firstname = hfname;
+               this.lastname = hlname;
+            };
+            fullname(){
+                return this.firstname+" "+this.lastname;
+            }
+            get mission(){
+                return this.#mission;
+            }
+            set mission(nmission){
+                this.#mission = nmission;
+            }
+        };
+        let hero1 = new Hero("Batman","Bruce","Wayne",7);
+        let hero2 = new Hero("Superman","Clark","Kent",10);
+        console.log( hero1.fullname() );
+        console.log( hero1.mission );
+        hero1.mission = "Save the world";
+        console.log( hero2.fullname() );
+        console.log( hero1.mission );
+        console.log( hero1.power );
+        console.log( hero2.power );
+        console.log(Hero.version);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
